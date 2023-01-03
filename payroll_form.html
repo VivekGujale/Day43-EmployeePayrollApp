@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="payroll_form.css">
+    <script src="payroll_form.js"></script>
     <title>Employee payroll from</title>
 </head>
 
@@ -146,11 +147,10 @@
                 </div>
             </div>
 
-            <div class="row—content">
+            <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
                 <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
             </div>
-
             <div class="buttonParent">
                 <a href="./payroll_form.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit—reset">
@@ -161,6 +161,13 @@
 
         </form>
     </div>
+    <script>
+        const salary = document.querySelector('#salary');
+        const output = document.querySelector('.salary-output');
+        salary.addEventListener('input', function () {
+            output.textContent = salary.value;
+        });
+    </script>
 </body>
 
 </html>
